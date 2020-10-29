@@ -69,11 +69,10 @@ reachOffset' :: (Ord str, Show str)
             -- ^ Offset to reach
             -> PosState [Tag str]
             -- ^ Initial 'PosState' to use
-            -> (SourcePos, String, PosState [Tag str])
+            -> (String, PosState [Tag str])
             -- ^ (See below)
 
-reachOffset' o PosState{..} = ( pstateSourcePos
-                              , show . fromTagText $ head post
+reachOffset' o PosState{..} = ( show . fromTagText $ head post
                               , PosState{ pstateInput = post
                                         , pstateOffset = max pstateOffset o
                                         , pstateSourcePos = SourcePos n l (c <> pos1)

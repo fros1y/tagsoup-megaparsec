@@ -23,8 +23,7 @@ flag pedantic
 library
   hs-source-dirs:      src
   exposed-modules:     Text.Megaparsec.TagSoup
-  build-depends:       base         >= 4.7   && < 5
-                     , containers   >= 0.5   && < 0.6
+  build-depends:       base         >= 4.7   && < 10
                      , megaparsec
                      , containers >= 0.6.0.1
                      , tagsoup      >= 0.13  && < 0.15
